@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-primary);
+}
+
+:root {
+    --bg-primary: rgb(31, 24, 47);
+    --bg-second: rgb(130, 130, 130);
+    --bg-third: rgb(116, 116, 116);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    align-items: center;
+}
+
+.title-about {
+    text-align: center;
+}
+
+
+.title-about a {
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--bg-second);
+    transition: 0.5s;
+}
+
+.desc-title {
+    font-size: 13px;
+    color: var(--bg-second);
+}
+
+.desc-title span {
+    margin-bottom: 10px;
+}
+
+.title-about a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+.description {
+    width: 550px;
+}
+
+.description p {
+    padding: 25px;
+    font-size: 15px;
+    color: var(--bg-third);
+}
+
+.icon-about {
+    position: relative;
+    left: 10px;
+    font-size: 20px;
+}
+
+.back-button {
+   position: relative;
+   left: 220px;
+   background-color: var(--bg-second);
+   width: 60px;
+   bottom: 11px;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   border-radius: 7px;
+   border: 3px solid var(--bg-second);
+   box-shadow: 3px 2px var(--bg-second);
+   transition: 0.3s;
+}
+
+.back-button a {
+    color: var(--bg-primary);
+    text-decoration: none;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.back-button:hover {
+    background-color: var(--bg-primary);
+    border: 3px solid var(--bg-second);
+}
+
+.back-button a:hover {
+    color: white;
+}
+
+@media screen and (max-width: 1075px) {
+    .description {
+        width: 430px;
+    }
+
+    .description p {
+        font-size: 12px;
+    }
+
+    .back-button {
+        position: relative;
+        left: 145px;
+        background-color: var(--bg-second);
+        width: 80px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 7px;
+     }
+}
+
+@media screen and (max-width: 1075px) {
+    .description {
+        width: 380px;
+    }
+
+    .description p {
+        font-size: 12px;
+    }
+
+    .back-button {
+        position: relative;
+        left: 145px;
+        bottom: 0px;
+        background-color: var(--bg-second);
+        width: 80px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 7px;
+     }
+}

@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+
+body {
+    background-color: var(--bg-primary);
+    backdrop-filter: blur(5px);
+}
+
+:root {
+    --bg-primary: rgb(31, 24, 47);
+    --bg-second: rgb(130, 130, 130);
+    --bg-third: rgb(116, 116, 116);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.container {
+    background-position: center top;
+    background-image: url("../img/nightskymoonforest.png");
+    height: 550px;
+    width: 1200px;
+    border: 5px solid var(--bg-second);
+    border-radius: 20px;
+    display: flex;
+    box-shadow: 10px 10px 100px var(--bg-second);
+    padding: 10px;
+}
+
+.title {
+    color: var(--bg-second);
+    font-size: 40px;
+}
+
+.description {
+    margin-top: 6px;
+    color: var(--bg-third);
+    font-size: 20px;
+}
+
+.isi_box {
+    width: 100%;
+    padding: 10px;
+   
+}
+
+
+.isi_box span {
+    font-size: 15px;
+    color: var(--bg-third);
+}
+
+.btn_tambah_data {
+    border-radius: 7px;
+    height: 43px;
+    width: 125px;
+    margin-top: 20px;
+    background-color: var(--bg-primary);
+    transition: 0.3s;
+}
+
+.btn_tambah_data a {
+    color: var(--bg-second);
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.btn_tambah_data:hover {
+    background-color: var(--bg-second);   
+    transition: 0.3s;
+}
+
+.btn_tambah_data a:hover {
+    color: var(--bg-primary);
+    transition: 0.3s;
+}
+
+.btn_home {
+    border-radius: 7px;
+    height: 43px;
+    width: 90px;
+    margin-top: 20px;
+    background-color: var(--bg-primary);
+    transition: 0.3s;
+}
+
+.btn_home a {
+    color: var(--bg-second);
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.btn_home:hover {
+    background-color: var(--bg-second);   
+    transition: 0.3s;
+}
+
+.btn_home a:hover {
+    color: var(--bg-primary);
+    transition: 0.3s;
+}
+
+.icon_plus {
+    font-size: 20px;
+    padding: 3px;
+}
+
+.list_table_container {
+    
+    color: var(--bg-second);
+    /* border: 1px white solid; */
+}
+
+.list_table {
+    border-collapse: co;
+    width: 100%;
+    text-align: center;
+}
+
+thead tr {
+    text-align: center;
+}
+
+tbody tr {
+    transition: 0.3s;
+}
+
+tbody tr:hover {
+    transition: 0.3s;
+    background-color:var(--bg-primary);
+}
+
+tr:hover td {
+    color: var(--bg-second);
+  }
+
+.list_table thead {
+    background-color: rgb(39, 39, 106);
+    font-size: 20px; 
+}
+
+.list_table tbody {
+    font-size: 15px;
+}
+
+tbody tr {
+    background-color: rgb(224, 224, 224);
+}
+
+
+.list_table th, td {
+    padding: 15px;
+  }
+
+.list_table th {
+    color: white;
+}
+
+.list_table td {
+    color: black;
+}
+
+  tr:nth-child(even) {background-color: #bbb}
+
+.icon_edit {
+    position: relative;
+    right: 7px;
+    cursor: pointer;
+    color: var(--bg-second);
+    transition: 0.3s;
+}
+
+.icon_edit:hover {
+    position: relative;
+    right: 7px;
+    cursor: pointer;
+    color: rgb(0, 89, 255);
+    transition: 0.3s;
+}
+
+.icon_remove {
+    position: relative;
+    left: 7px;
+    cursor: pointer;
+    color: var(--bg-second);
+    transition: 0.3s;
+}
+
+.icon_remove:hover {
+    position: relative;
+    left: 7px;
+    color: red;
+    transition: 0.3s;
+}

@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #1c1d39;
+}
+
+:root {
+    --bg-primary: rgb(31, 24, 47);
+    --bg-second: rgb(130, 130, 130);
+    --bg-third: rgb(116, 116, 116);
+}
+
+.container {
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+
+.title {
+    color: var(--bg-second);
+}
+
+.main-box {
+    box-shadow: 10px 10px 100px var(--bg-second);
+    border: 5px solid var(--bg-third);
+    border-radius: 12px;
+}
+
+.content-box {
+    border-radius: 12px;
+    padding: 16px;
+    background-color: var(--bg-primary);
+}
+
+.icon {
+    color: var(--bg-second);
+    text-align: center;
+    margin: 25px;
+}
+
+.title {
+    text-align: center;
+}
+
+.description {
+    padding: 10px;
+    text-align: center;
+    color: var(--bg-third);
+}
+
+.button_container {
+    display: flex;
+    justify-content: center;
+}
+
+.button-back {
+    text-align: center;
+    padding: 12px;
+    margin: 20px;
+    border: 2px solid var(--bg-second);
+    width: 100%;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.button-next {
+    text-align: center;
+    padding: 12px;
+    margin: 20px;
+    border: 2px solid var(--bg-second);
+    width: 100%;
+    border-radius: 7px;
+    transition: 0.3s;
+    
+}
+
+.button-back a {
+    text-decoration: none;
+    color: var(--bg-second);
+    transition: 0.3s;
+}
+
+.button-next a {
+    text-decoration: none;
+    color: var(--bg-second);
+    transition: 0.3s;
+}
+
+.button-back:hover {
+    background-color: var(--bg-second);
+}
+
+.button-back a:hover {
+    color: var(--bg-primary);
+    transition: 0.3s;
+}
+
+.button-next:hover {
+    background-color: var(--bg-second);
+}
+
+.button-next a:hover {
+    color: var(--bg-primary);
+    transition: 0.3s;
+}

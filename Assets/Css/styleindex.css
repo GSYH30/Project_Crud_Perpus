@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #1c1d39;
+}
+
+:root {
+    --bg-primary: rgb(31, 24, 47);
+    --bg-second: rgb(130, 130, 130);
+    --bg-third: rgb(116, 116, 116);
+}
+
+.container {
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.title {
+    color: var(--bg-second);
+}
+
+.main-box {
+    box-shadow: 10px 10px 100px var(--bg-third);
+    border: 5px solid var(--bg-third);
+    border-radius: 12px;    
+}
+
+.nav-bar {
+    position: relative;
+    top: 6px;
+}
+
+.content-box {
+    padding: 16px;
+    background-color: var(--bg-primary);
+    border-radius: 12px;
+}
+
+.nav-bar ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.nav-bar li {
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    border: 3px solid var(--bg-second);
+    background-color: var(--bg-primary);
+    padding: 5px;
+    border-radius: 10px;
+    margin: 12px;
+    transition: 0.3s;
+    box-shadow: 3px 2px var(--bg-second);
+}
+
+.nav-bar li:hover {
+    background-color: var(--bg-second);
+    border: 3px solid var(--bg-second);
+    transition: 0.3s;
+}
+
+.nav-bar a {
+    color: var(--bg-second);
+    font-size: 19px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-bar a:hover {
+    color: var(--bg-primary);
+}
+
+.icon_discord {
+    color: var(--bg-second);
+    font-size: 25px;
+    margin: 10px;
+    transition: 0.3s;
+    
+}
+
+.icon_discord:hover {
+    color: aliceblue;
+    transition: 0.3s;
+    text-shadow: 15px 0px 5px var(--bg-third);
+}
+
+.icon_github {
+    color: var(--bg-second);
+    font-size: 25px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.icon_github:hover {
+    color: aliceblue;
+    transition: 0.3s;
+    text-shadow: -15px 0px 5px var(--bg-third);
+}
+
+
+.nav-home label li {
+    background-color: var(--bg-second);
+}
+
+.nav-home label a {
+    color: var(--bg-primary);
+}
+
+.nav-home label li:hover {
+    transition: 0.3s;
+    background-color: var(--bg-primary);
+}
+
+.nav-home label a:hover {
+    color: var(--bg-second);
+    transition: 0.3s;
+}
+
+.nav-home label li {
+    color: var(--bg-primary);
+}
+
+.nav-home label a {
+    color: var(--bg-primary);
+}
+
+.footer  span{
+    font-size: 35px;
+}
+
+.footer {
+    position: relative;
+    top: 6px;
+    text-align: center;
+    padding: 0px;
+    color: var(--bg-second);
+}
+
+.footer p {
+    font-size: 15px;
+    color: var(--bg-third);
+}
