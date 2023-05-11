@@ -4,6 +4,8 @@
     $query = "SELECT * FROM tb_member";
     $sql = mysqli_query($conn, $query);
     $no = 0; 
+
+    $hapus_data = "SELECT * FROM tb_member";
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +38,7 @@
                     <h1 class="title">Daftar Member</h1>
                 </div>
                 <p class="description">Ini adalah list member yang terdaftar</p>
-                    <span>_ Crud <i>Read</i></span>
+                    <span>_ Crud <i>Read Delete</i></span>
                 <div class="list_buku">
                     <button class="btn_home"><a href="index.php"><i class="fa-solid fa-house icon_plus"></i></i>Home</a></button>
                     <button class="btn_home"><a href="list.php"><i class="fa-solid fa-circle-left icon_plus"></i></i>Back</a></button>
@@ -52,6 +54,7 @@
                                 <th style="width: 100px;">Kelas</th>
                                 <th style="width: 200px;">Jurusan</th>
                                 <th style="width: 200px;">Password</th>
+                                <th style="width: 200px;">Option</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -66,7 +69,11 @@
                                 <td><?php echo $result['nama'] ;?></td>
                                 <td><?php echo $result['kelas'] ;?></td>
                                 <td><?php echo $result['jurusan'] ;?></td>
-                                <td><?php echo $result['password'] ;?></td>                                                
+                                <td><?php echo $result['password'] ;?></td>
+                                <td style="width: 4%;">
+                                    <a href="koneksi/proses_member.php?delete=<?php echo $result['id_member']; ?>">
+                                        <i class="fa-solid fa-trash icon_remove" id="hapus_data" onclick="return confirm('Apakah anda ingin menghapus data tersebut?')"></i></a>
+                                </td>                                                   
                             </tr>
                             <?php
                                 }  

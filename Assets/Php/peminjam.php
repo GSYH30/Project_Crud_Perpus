@@ -4,6 +4,8 @@
     $query = "SELECT * FROM tb_peminjaman";
     $sql = mysqli_query($conn, $query);
     $no = 0; 
+
+    $hapus_data = "SELECT * FROM tb_peminjaman";
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +38,7 @@
                     <h1 class="title">Daftar Peminjam</h1>
                 </div>
                 <p class="description">Ini adalah daftar list member yang meminjam buku</p>
-                    <span>_ Crud <i>Read </i></span>
+                    <span>_ Crud <i>Read Delete </i></span>
                 <div class="list_buku">
                     <button class="btn_home"><a href="index.php"><i class="fa-solid fa-house icon_plus"></i></i>Home</a></button>
                     <button class="btn_home"><a href="list.php"><i class="fa-solid fa-circle-left icon_plus"></i></i>Back</a></button>
@@ -47,10 +49,11 @@
                         <thead>
                             <tr>
                                 <th style="width: 50px;">Id</th>
-                                <th style="width: 200px;">No Buku</th>
-                                <th style="width: 200px;">No Member</th>
+                                <th style="width: 100px;">No Buku</th>
+                                <th style="width: 100px;">No Member</th>
                                 <th style="width: 100px;">Tanggal Peminjaman</th>
-                                <th style="width: 200px;">Tanggal Pengembalian</th>
+                                <th style="width: 100px;">Tanggal Pengembalian</th>
+                                <th style="width: 0px;">Option</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -64,7 +67,11 @@
                                 <td><?php echo $result['no_buku'] ;?></td>
                                 <td><?php echo $result['no_member'] ;?></td>
                                 <td><?php echo $result['tanggal_peminjaman'] ;?></td>
-                                <td><?php echo $result['tanggal_pengembalian'] ;?></td>                                               
+                                <td><?php echo $result['tanggal_pengembalian'] ;?></td>
+                                <td style="width: 4%;">
+                                    <a href="koneksi/proses_member.php?delete=<?php echo $result['id_peminjaman']; ?>">
+                                        <i class="fa-solid fa-trash icon_remove" id="hapus_data" onclick="return confirm('Apakah anda ingin menghapus data tersebut?')"></i></a>
+                                </td>                                                  
                             </tr>
                             <?php
                                 }  

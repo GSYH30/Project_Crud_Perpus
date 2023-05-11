@@ -9,39 +9,34 @@
             $tanggal_peminjaman= $_POST['tanggal_peminjaman'];
             $tanggal_pengembalian= $_POST['tanggal_pengembalian'];
 
+            // Cek no buku
+            $query_cek_member = "SELECT * FROM tb_member WHERE no_member = '$no_member'";
+            $sql_cek_member = mysqli_query($conn, $query_cek_member);
+    
+            // query untuk mengecek apakah data buku ditemukan
             $query_cek_buku = "SELECT * FROM tb_buku WHERE no_buku = '$no_buku'";
             $sql_cek_buku = mysqli_query($conn, $query_cek_buku);
     
-            if(mysqli_num_rows($sql_cek_buku) > 0){
-            
-            $query = "INSERT INTO tb_peminjaman VALUES(null, '$no_buku', '$no_member', '$tanggal_peminjaman', '$tanggal_pengembalian')";
-            $sql = mysqli_query($conn, $query);
-
-            if($sql){
-                // Redirect ke halaman baru setelah berhasil memasukkan data ke database
-                header("Location: ../Notif-Crud/notif-pinjam.php");
-           } else {
-                echo "Gagal memasukkan data";
-            }
-        } else {
-            // data buku tidak ditemukan, tampilkan notifikasi
-            header("Location: ../Notif-Crud/notif-data-tidak-ditemukan.php");
+            if(mysqli_num_rows($sql_cek_member) > 0 && mysqli_num_rows($sql_cek_buku) > 0){
+                // data member dan buku ditemukan, maka lakukan proses peminjaman
+                $query = "INSERT INTO tb_peminjaman VALUES(null, '$no_buku', '$no_member', '$tanggal_peminjaman', '$tanggal_pengembalian')";
+                $sql = mysqli_query($conn, $query);
+    
+                if($sql){
+                    // Redirect ke halaman baru setelah berhasil memasukkan data ke database
+                    header("Location: ../Notif-Crud/notif-pinjam.php");
+                } else {
+                    echo "Gagal memasukkan data";
+                }
+            } else if(mysqli_num_rows($sql_cek_member) == 0) {
+                // data member tidak ditemukan, tampilkan notifikasi
+                header("Location: ../Notif-Crud/notif-check-no-member.php");
+            } else {
+                // data buku tidak ditemukan, tampilkan notifikasi
+                header("Location: ../Notif-Crud/notif-check-no-buku.php");
         }
     }
-
-    } else if ($_POST['aksi'] == "edit") {
-        $no_buku = $_POST['no_buku'];
-
-        $query = "UPDATE tb_peminjaman SET no_buku='$no_buku', no_member='$no_member', tanggal_peminjaman='$tanggal_peminjaman', 'tanggal_pengembalian' WHERE id_buku ='$id_buku';";
-        $sql = mysqli_query($conn, $query);
-
-        if($sql){
-            header("Location: ../Notif-Crud/notif-edit.php");
-        } else {
-            echo $query;
-        }
-    }
-
+}
     // Create Member
 
     if (isset($_POST['aksi'])) {
@@ -63,5 +58,30 @@
                 echo $query;
             }
         }
+    } 
+ 
+     if(isset($_GET['delete'])){
+        $id_member = $_GET['delete'];
+        $query = "DELETE FROM tb_member WHERE id_member = '$id_member';";
+        $sql = mysqli_query($conn , $query);
+        
+        if($sql){
+            header("Location: ../Notif-Crud/notif-delete.php");
+        } else {
+            echo $query;
+        }
     }
+
+    if(isset($_GET['delete'])){
+        $id_peminjaman = $_GET['delete'];
+        $query = "DELETE FROM tb_peminjaman WHERE id_peminjaman = '$id_peminjaman';";
+        $sql = mysqli_query($conn , $query);
+        
+        if($sql){
+            header("Location: ../Notif-Crud/notif-delete.php");
+        } else {
+            echo $query;
+        }
+    }
+    
 ?>
