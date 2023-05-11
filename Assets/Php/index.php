@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gsyh X Pplg - Index</title>
+    <title>Gsyh X Pplg - Index Admin</title>
     <link rel="icon" href="../Image/web_ico_diamond.png">
     <link rel="stylesheet" href="../Css/styleindex.css">
     <!-- Start Icon -->
@@ -15,12 +15,12 @@
     <div class="container">
         <div class="main-box">
             <div class="content-box">
-                <h1 class="title">Crud Simple Perpustakaan</h1>
-                <marquee onmouseover="this.stop();" onmouseout="this.start();">
+                <h1 class="title">Crud Perpustakaan (Admin)</h1>
+                <!-- <marquee onmouseover="this.stop();" onmouseout="this.start();"> -->
                 <div class="nav-bar">
                     <nav>
                         <ul  class="nav-home">
-                            <label><li><a href="javascript:alert('Kamu sedang berada di Home :)')">Home </a></li></label>
+                            <label><li><a href="peminjaman/index_peminjaman.php">User </a></li></label>
                             <li><a href="../Php/list.php">List</a></li>
                             <li><a href="../Php/crud.php">Crud</a></li>
                             <li><a href="../Php/about.php">About</a></li>

@@ -40,11 +40,22 @@ section {
     font-size: 40px;
 }
 
+.icon_remove {
+    color: var(--bg-second);
+    transition: 0.3s;
+}
+
+.icon_remove:hover {
+    color: red;
+    transition: 0.3s;
+}
+
 .description {
     margin-top: 6px;
     color: var(--bg-third);
     font-size: 20px;
 }
+
 
 .isi_box {
     width: 100%;
@@ -188,17 +199,15 @@ tbody tr {
     transition: 0.3s;
 }
 
-.icon_remove {
+.icon_tambah {
     position: relative;
-    left: 7px;
     cursor: pointer;
     color: var(--bg-second);
     transition: 0.3s;
 }
 
-.icon_remove:hover {
+.icon_tambah:hover {
     position: relative;
-    left: 7px;
-    color: red;
+    color: rgb(0, 255, 13);
     transition: 0.3s;
 }

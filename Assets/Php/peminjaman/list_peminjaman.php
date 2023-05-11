@@ -1,11 +1,9 @@
 <?php
-    require 'koneksi/koneksi.php';
+    require '../koneksi/koneksi.php';
 
     $query = "SELECT * FROM tb_buku";
     $sql = mysqli_query($conn, $query);
     $no = 0;
-
-    $hapus_data = "SELECT * FROM tb_buku";
 ?>
 
 <!DOCTYPE html>
@@ -15,8 +13,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gsyh X Pplg - List Buku</title>
-    <link rel="icon" href="../Image/web_ico_diamond.png">
-    <link rel="stylesheet" href="../Css/stylelist.css">
+    <link rel="icon" href="../../Image/web_ico_diamond.png">
+    <link rel="stylesheet" href="../../Css/stylelist.css">
     <!-- Fonts -->
     <div>
         <!-- Roboto Regular 400 -->
@@ -35,15 +33,14 @@
         <div class="container">
             <div class="isi_box">
                 <div class=".title">
-                    <h1 class="title">List Buku</h1>
-                    <p class="description">Ini adalah list daftar buku yang dimasukan</p>
+                    <h1 class="title">List Peminjaman Buku</h1>
+                    <p class="description">Ini adalah list daftar buku yang dapat di pinjam</p>
                     <span>_ Crud <i>Create Read Update Delete</i></span>
                 </div>
                 <div class="list_buku">
-                    <button class="btn_home"><a href="../php/index.php"><i class="fa-solid fa-house icon_plus"></i></i>Home</a></button>
-                    <button class="btn_tambah_data"><a href="../php/crud.php"><i class="fa-solid fa-plus icon_plus"></i>Create Book</a></button>
-                    <button class="btn_tambah_data"><a href="../php/peminjam.php"><i class="fa-solid fa-book-medical icon_plus"></i>Peminjam</a></button>
-                    <button class="btn_tambah_data"><a href="../php/member.php"><i class="fa-solid fa-user-plus icon_plus"></i>Member</a></button>
+                    <button class="btn_home"><a href="index_peminjaman.php"><i class="fa-solid fa-house icon_plus"></i></i>Home</a></button>
+                    <button class="btn_tambah_data"><a href="crud_peminjaman.php"><i class="fa-solid fa-plus icon_plus"></i>Pinjam</a></button>
+                    <button class="btn_tambah_data"><a href="create_member.php"><i class="fa-solid fa-user-plus icon_plus"></i>Akun</a></button>
                 </div>
                 <br>
                 <div class="list_table_container">
@@ -70,12 +67,10 @@
                                 <td><?php echo $result['judul_buku']; ?></td>
                                 <td><?php echo $result['type_buku']; ?></td>
                                 <td><?php echo $result['genre_buku']; ?></td>
-                                <td style="width: 4%;">
-                                    <a href="edit.php?edit=<?php echo $result['id_buku']; ?>">
-                                        <i class="fa-solid fa-pen-to-square icon_edit"></i></a>
-                                    <a href="koneksi/proses.php?delete=<?php echo $result['id_buku']; ?>">
-                                        <i class="fa-solid fa-trash icon_remove" id="hapus_data" onclick="return confirm('Apakah anda ingin menghapus data tersebut?')"></i></a>
-                                </td>                            
+                                <td style="width: 0px;">
+                                    <a href="edit_peminjaman.php?edit=<?php echo $result['id_buku']; ?>">
+                                    <i class="fa-solid fa-plus icon_tambah"></i></a>
+                                </td>  
                             </tr>
                             <?php
                                 }  

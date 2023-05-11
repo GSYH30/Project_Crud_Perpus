@@ -25,6 +25,7 @@ body {
 
 .title {
     color: var(--bg-second);
+    text-align: center;
 }
 
 .main-box {

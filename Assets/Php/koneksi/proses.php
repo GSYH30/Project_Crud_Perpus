@@ -36,7 +36,6 @@
                 echo $query;
             }
         }
-
     } 
 
     if(isset($_GET['delete'])){

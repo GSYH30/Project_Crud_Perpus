@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gsyh X Pplg - Index</title>
-    <link rel="icon" href="../Image/web_ico_diamond.png">
-    <link rel="stylesheet" href="../Css/styleindex.css">
+    <title>Gsyh X Pplg - Index User</title>
+    <link rel="icon" href="../../Image/web_ico_diamond.png">
+    <link rel="stylesheet" href="../../Css/styleindex.css">
     <!-- Start Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- End Icon  -->
@@ -15,17 +15,17 @@
     <div class="container">
         <div class="main-box">
             <div class="content-box">
-                <h1 class="title">Crud Simple Perpustakaan</h1>
-                <marquee onmouseover="this.stop();" onmouseout="this.start();">
+                <h1 class="title">Crud Perpustakaan (User)</h1>
+                <!-- <marquee onmouseover="this.stop();" onmouseout="this.start();"> -->
                 <div class="nav-bar">
                     <nav>
                         <ul  class="nav-home">
-                            <label><li><a href="peminjaman.html">User</a></li></label>
-                            <li><a href="../Html/list.html">List</a></script></li>
-                            <li><a href="../Html/crud.html">Crud</a></li>
-                            <li><a href="../Html/about.html">About</a></li>
+                        <label><li><a href="javascript: var password = prompt('Masukkan password:' ); if(password=='admin'){window.location.href='../index.php';}else{alert('Password salah!');}"> Admin </a></li></label>
+                            <li><a href="list_peminjaman.php">List</a></li>
+                            <li><a href="crud_peminjaman.php">Pinjam</a></li>
+                            <li><a href="about_peminjaman.php">About</a></li>
                         </ul>
-                    </nav>
+                     </nav>
                 </div>
                 </marquee>
                 <footer class="footer">
